@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6dfe2a51f6.js" crossorigin="anonymous"></script>
+    <title>Mason Mathura</title>
+</head>
+<body>
+    <div class="parallax">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/portfolioLogo.png" class="logo">
+                <ul id="sidemenu">
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>M</span>ason Mathura</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="background2">
+    <!-- ABOUT -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user1.png" alt="Picture of Me, Dashingly Handsome">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About <span>M</span>e</h1>
+                    <p>I am an aspiring UI/UX designer from Canada. I'm passionate about combining
+                       style and substance to create dynamic experiences and interfaces for users. My
+                       motto is ride like lightning, crash like thunder. People also know me as fire god
+                       and ghost rider. RTA baby! RTA!
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Website Development</li>
+                            <li><span>Design</span><br>Logos, Graphics, and Art</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>IT Innovation and Design and Conestoga College</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PORTFOLIO -->
+    
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"><span>M</span>y Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.png" alt="Picture of a wikipedia website redesign">
+                    <div class="layer">
+                        <h3>Wikipedia Website Redesign</h3>
+                        <p>This is a redesign of Wikipedia from an UX design perspective.
+                            2023//UI/UX Design//Wireframing//Prototyping</p>
+                        <a href="https://xd.adobe.com/view/81d9abda-da10-477f-b885-70c37aefcca2-d48a/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work2.png" alt="Picture of a TechRadar website redesign">
+                    <div class="layer">
+                        <h3>TechRadar Website Redesign</h3>
+                        <p>This is a redesign of TechRadar from an UX design perspective.
+                            2023//UI/UX Design//Wireframing//Prototyping</p>
+                        <a href="https://xd.adobe.com/view/d007ee95-7e6f-460e-8de9-13e8adb5048a-8554/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+            <!-- Contact -->
+    
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact <span>M</span>e</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> <span>m</span>asonmathura2166@conestogac.on.ca</p>
+                    <div class="social-icons">
+                        <a target="_blank" href="https://www.linkedin.com/in/mason-mathura/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button><br><br>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 by Mason Mathura</p>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxDRgmD0fDmg4skmVkcRcZbMiYGXNm039TK9G6VQgHfEZ-3aNGslReXFQ5oFRrgUhfIZQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML= "Thank You! I'll be in touch soon!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
