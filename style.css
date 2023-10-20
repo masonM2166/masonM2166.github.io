@@ -333,7 +333,8 @@ form input, form textarea{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background:#7B8794;
+    background:#525760;
+    color: #ffffff;
     font-weight: 300;
     margin-top: 20px;
 }
